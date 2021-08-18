@@ -17,4 +17,9 @@ public class PlayerDao {
         String sql = "SELECT * FROM Player";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Player>(Player.class));
     }
+
+    public Player getPlayerById(int id) {
+        String sql = "SELECT * FROM player WHERE id = ?";
+        return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<Player>(Player.class), new Object[] {id});
+    }
 }
