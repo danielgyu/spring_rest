@@ -1,5 +1,7 @@
 package com.example.springdata.tennisplayer;
 
+import java.sql.Date;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +23,23 @@ public class TennisPlayerApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		logger.info("All Players Data: {}", dao.getAllPlayers());
-		logger.info("Player with id 3 is : {}", dao.getPlayerById(3));
+	    /*
+		logger.info("All Players Data: {}", 
+			dao.getAllPlayers());
+		logger.info("Player with id 3 is : {}",
+			dao.getPlayerById(3));
+		logger.info("Inserting Plyaer 4: {}",
+			dao.insertPlayer(new Player (
+				4,
+				"Thiem",
+				"Austria",
+				new Date(System.currentTimeMillis()),
+				17
+				)));
+		logger.info("All Players Data: {}", 
+			dao.getAllPlayers());
+	    */
+	    logger.info("Query by nationality: {}",
+		    dao.getPlayersByNationality("France"));
 	}
 }
