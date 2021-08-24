@@ -23,7 +23,6 @@ public class TennisPlayerApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-	    /*
 		logger.info("All Players Data: {}", 
 			dao.getAllPlayers());
 		logger.info("Player with id 3 is : {}",
@@ -38,7 +37,6 @@ public class TennisPlayerApplication implements CommandLineRunner {
 				)));
 		logger.info("All Players Data: {}", 
 			dao.getAllPlayers());
-	    */
 	    logger.info("Query by nationality: {}",
 		    dao.getPlayersByNationality("France"));
 	}
