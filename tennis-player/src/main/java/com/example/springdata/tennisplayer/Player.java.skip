@@ -1,41 +1,20 @@
 package com.example.springdata.tennisplayer;
 
 import java.sql.Date;
+import java.sql.Time;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Column;
-
-@Entity
-@Table(name="player")
-public class Player{
-    @Id
-    @GeneratedValue
+public class Player {
     private int id;
-    @Column(name="name") //can be used but unnecessar if same name
     private String name;
-    @Column(name="nationality")
     private String nationality;
-    @Column(name="birthDate")
     private Date birthDate;
-    @Column(name="titles")
     private int titles;
 
-    public Player() {}
+    public Player( ) {}
 
-    public Player(String name, String nationality, Date birthDate, int titles) {
-	super();
-        this.name = name;
-        this.nationality = nationality;
-        this.birthDate = birthDate;
-        this.titles = titles;
-    }
-
-    public Player(int id,String name, String nationality, Date birthDate, int titles) {
-	super();
-	this.id = id;
+    public Player(int id, String name, String nationality, Date birthDate, int titles) {
+        super();
+        this.id = id;
         this.name = name;
         this.nationality = nationality;
         this.birthDate = birthDate;
@@ -87,5 +66,4 @@ public class Player{
         return "\nPlayer [id= " + id + ", name= " + name + ", nationality= " + nationality + ", birthDate= " + birthDate
                 + ", titles= " + titles + "]";
     }
-
 }

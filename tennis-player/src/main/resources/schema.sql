@@ -1,3 +1,4 @@
+/*
 DROP TABLE IF EXISTS player;
 CREATE TABLE player (
    ID INTEGER NOT NULL,
@@ -7,3 +8,4 @@ CREATE TABLE player (
    Titles INTEGER,
    PRIMARY KEY (ID)
 );
+*/
